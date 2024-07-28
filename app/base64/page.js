@@ -7,21 +7,21 @@ import { SearchAppBar } from "../navigation"
 
 
 export default function LandingPage() {
-    const [encode,useEncode] = React.useState(false)
-    const [input,useInput] = React.useState("")
-    const [output,useOutput] = React.useState("")
+    const [encode,setEncode] = React.useState(false)
+    const [input,setInput] = React.useState("")
+    const [output,setOutput] = React.useState("")
     const toggleSwitch = (e) => {
-        useEncode(encode => e.target.checked)
+        setEncode(encode => e.target.checked)
     }
     const handleInputChange = (e) => {
-        useInput(input=>e.target.value)
+        setInput(input=>e.target.value)
     }
 
     const base64Convert = () => {
         if (encode) {
-            useOutput(output=>btoa(input))
+            setOutput(output=>btoa(input))
         } else {
-            useOutput(output=>atob(input))
+            setOutput(output=>atob(input))
         }
     }
 
