@@ -28,7 +28,7 @@ export default function LandingPage() {
 
     return (
         <>
-            <SearchAppBar title={"base64 Tools"} />
+            <SearchAppBar title={"Base 64 Tools"} />
             <Container maxWidth="lg" sx={{ display:'flex', alignItems: 'center', justifyContent: "center", flexDirection:'column'}}>
                 <Stack direction="row" spacing={2} sx={{ mt: 3, justifyContent: "center" }}>
                     <Typography variant='h5'>Decode</Typography>

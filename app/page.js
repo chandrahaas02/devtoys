@@ -1,27 +1,26 @@
 'use client'
 import * as React from 'react';
-import { Box, Typography, Button, Grid, Container} from '@mui/material';
+import { Box, Typography,Container} from '@mui/material';
 import { useRouter } from 'next/navigation'
+import { SearchAppBar } from './navigation.js'
 
 
-export default function  LandingPage()  {
+export default function LandingPage() {
   const router = useRouter()
   return (
     <>
-    <Container maxWidth="lg">
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-        {/* Hero section */}
-            <Typography variant="h2" component="h1" gutterBottom>
-              {"{"} {"}"} Dev Toys
-            </Typography>
-            <Typography variant="body1" sx={{p:3}}>
-              Find your every Day tools at place
-            </Typography>
-            <Button variant="contained" color="primary" onClick={() => router.push('/home')}>
-              Explore Tools
-            </Button>
-      </Box>
-    </Container>
+      <SearchAppBar />
+      <Container maxWidth="lg">
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '95vh' }}>
+          {/* Hero section */}
+          <Typography variant="h2" component="h1" gutterBottom>
+            {"{"} {"}"} Dev Toys
+          </Typography>
+          <Typography variant="body1" sx={{ p: 3 }}>
+            Find your every Day tools at place
+          </Typography>
+        </Box>
+      </Container>
     </>
   )
 }
