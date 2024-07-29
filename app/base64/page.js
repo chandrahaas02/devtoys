@@ -2,7 +2,6 @@
 import * as React from 'react';
 import Image from "next/image";
 import { Box, Typography, Button, Grid, Container, Stack, Switch, TextField } from '@mui/material';
-import { useRouter } from 'next/navigation'
 import { SearchAppBar } from "../navigation"
 
 
