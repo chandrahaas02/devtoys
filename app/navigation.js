@@ -84,8 +84,8 @@ const SearchAppBar = ({ title }) => {
   }
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar position="static" elevation='0'>
+        <Toolbar sx={{backgroundColor: "#121212"}}>
           <IconButton
             size="large"
             edge="start"
